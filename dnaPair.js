@@ -11,7 +11,7 @@ the arrays are grouped into one encapsulating array.*/
 function pairElement(str) {
   dnaPair = [];
   str = str.split("");
-  var strand = function(char) {
+  let strand = function(char) {
     switch(char) {
       case "A":
         dnaPair.push(["A", "T"]);
@@ -27,7 +27,7 @@ function pairElement(str) {
         break;
     }
   };
-  for (var i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     strand(str[i]);
   }
   return dnaPair;
