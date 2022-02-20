@@ -3,12 +3,16 @@ Return an English translated sentence of the passed binary string.
 */
 
 function binaryAgent(str) {
+  // split string into an array so we can iterate over
   let newStr = str.split(" ")
+  // declare new array to later push 'translated values into
   let arr = [];
-
+  // loop through binary array
   newStr.forEach(function(item) {
+    // translate and push translated values into new array
     arr.push(String.fromCharCode(parseInt(item, 2)));
   })
+  // join array back into a string
   return arr.join("");
 }
 
