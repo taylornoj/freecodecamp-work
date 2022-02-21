@@ -13,3 +13,11 @@ to true when evaluated in a Boolean context.
 Remember, you can access object properties through 
 either dot notation or [] notation.
 */
+
+function truthCheck(collection, pre) {
+  // for every obj in the collection array, check
+  // truthiness of obj's property in pre parameter
+  return collection.every(obj => obj[pre]);
+}
+
+console.log(truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex"));
