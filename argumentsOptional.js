@@ -16,12 +16,13 @@ If either argument isn't a valid number, return undefined.
 */
 
 function addTogether() {
-  
+  // only first and second arguments
   let [first, second] = arguments;
-
+  
   if (typeof(first) !== "number") {
     return undefined;
   }
+  // if only one argument, then it has to return a function that uses that number & expects another one, to then add to it
   if (second === undefined) {
     return (second) => addTogether(first, second);
   }
