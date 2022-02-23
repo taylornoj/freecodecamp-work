@@ -36,12 +36,17 @@ let fullName = firstAndLast;
   this.setLastName = function(name) {
     fullName = fullName.split(" ")[0] + " " + name;
   }
+
+  this.setFullName = function(name) {
+    fullName = name;
+  }
   // return firstAndLast;
 };
 
 const bob = new Person('Bob Ross');
 bob.setFirstName("Taylor");
 bob.setLastName("Noj");
+bob.setFullName("Bob Ross");
 console.log(bob.getFirstName());
 console.log(bob.getLastName());
 console.log(bob.getFullName());
