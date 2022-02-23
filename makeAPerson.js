@@ -12,3 +12,31 @@ The methods that take an argument must accept only one argument
 and it has to be a string. These methods must be the only 
 available means of interacting with the object.
 */
+
+const Person = function(firstAndLast) {
+  
+let fullName = firstAndLast;
+
+  this.getFirstName = function() {
+    return fullName.split(" ")[0]
+  }
+
+  this.getLastName = function() {
+    return fullName.split(" ")[1];
+  }
+
+  this.getFullName = function() {
+    return fullName;
+  }
+
+  this.setFirstName = function(name) {
+    fullName = name + " " + fullName.split(" ")[1];
+  }
+  // return firstAndLast;
+};
+
+const bob = new Person('Bob Ross');
+bob.setFirstName("Sandra");
+console.log(bob.getFirstName());
+console.log(bob.getLastName());
+console.log(bob.getFullName());
