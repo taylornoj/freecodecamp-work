@@ -18,6 +18,12 @@ let romanNums = [
   [1, 'I']
 ];
 
+/*
+func returns one letter and then calls itself to return the next letter
+
+Does this until number passed to function is 0, meaning
+that all letters hvae been found and we can exit
+*/
 
 function convertToRoman(num) {
   if (num === 0) {
