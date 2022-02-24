@@ -7,3 +7,14 @@ You'll need to remove all non-alphanumeric characters
 into the same case (lower or upper case) in order to 
 check for palindromes.
 */
+
+function palindrome(str) {
+  str = str.replace(/\s+/g, '');
+  let strReverse = str.split("").reverse().join("");
+
+  console.log(str);
+  console.log(strReverse);
+}
+
+console.log(palindrome("eye"));
+console.log(palindrome("nope"));
