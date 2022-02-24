@@ -9,12 +9,14 @@ check for palindromes.
 */
 
 function palindrome(str) {
-  str = str.replace(/\s+/g, '');
+  str = str.toLowerCase().replace(/[^a-z0-9]/ig,"");
   let strReverse = str.split("").reverse().join("");
 
-  console.log(str);
-  console.log(strReverse);
+  return str == strReverse;
 }
 
 console.log(palindrome("eye"));
 console.log(palindrome("nope"));
+console.log(palindrome("five|\_/|four"));
+console.log(palindrome("_eye"));
+console.log(palindrome("My age is 0, 0 si ega ym."));
